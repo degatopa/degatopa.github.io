@@ -1,0 +1,54 @@
+{
+  "discos": [
+    {
+      "id": "resolume",
+      "nombre": "Resolume Arena",
+      "etiqueta": "RESOLUME",
+      "tag": "EN VIVO",
+      "uso": "Mezclar y operar en vivo",
+      "color": "#3CDD8A",
+      "tinta": "#FFFFFF",
+      "desde": "2024"
+    },
+    {
+      "id": "touchdesigner",
+      "nombre": "TouchDesigner",
+      "etiqueta": "TOUCH",
+      "tag": "EN VIVO",
+      "uso": "Visuales generativas y audioreactivas en tiempo real",
+      "color": "#E40C0C",
+      "tinta": "#111111",
+      "desde": "2026"
+    },
+    {
+      "id": "after-effects",
+      "nombre": "After Effects",
+      "etiqueta": "AFTER FX",
+      "tag": "ANIMACIÓN",
+      "uso": "Animación y composición",
+      "color": "#E506B4",
+      "tinta": "#FFFFFF",
+      "desde": "2024"
+    },
+    {
+      "id": "premiere",
+      "nombre": "Premiere",
+      "etiqueta": "PREMIERE",
+      "tag": "EDICIÓN",
+      "uso": "Edición de videoclips, cortometrajes y reels",
+      "color": "#0029F5",
+      "tinta": "#FFFFFF",
+      "desde": "2022"
+    },
+    {
+      "id": "blender",
+      "nombre": "Blender",
+      "etiqueta": "BLENDER",
+      "tag": "3D",
+      "uso": "Modelado y animaciones 3D",
+      "color": "#EDA302",
+      "tinta": "#FFFFFF",
+      "desde": "2026"
+    }
+  ]
+}

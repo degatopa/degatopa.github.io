@@ -1,0 +1,400 @@
+{
+  "marca": {
+    "nombre": "Dega",
+    "nombreReal": "Juan Torrado",
+    "sistema": "DEGA OS 2000",
+    "rol": "VJ / Diseñador audiovisual",
+    "usuario": "@degadegadega"
+  },
+  "meta": {
+    "titulo": "Dega · VJ y diseñador audiovisual — DEGA OS 2000",
+    "descripcion": "Dega (Pablo Gaitán), VJ y diseñador audiovisual. Visuales en vivo para conciertos y festivales, videoclips y piezas publicitarias.",
+    "url": "https://www.instagram.com/degadegadega/",
+    "imagen": "assets/og.jpg"
+  },
+  "contacto": {
+    "correo": "jtorradogaitan@gmail.com",
+    "whatsapp": "+57 301 550 5008",
+    "whatsappUrl": "https://wa.me/573015505008",
+    "instagram": "@degadegadega",
+    "instagramUrl": "https://www.instagram.com/degadegadega/",
+    "respuesta": "48 horas",
+    "disponible": "desde noviembre de 2026",
+    "formulario": {
+      "servicio": "Formspree",
+      "endpoint": "",
+      "nota": "Pega aquí la URL que te da Formspree (https://formspree.io/f/xxxxxxx). Si queda vacía, el formulario abre el correo del visitante (mailto)."
+    }
+  },
+  "base": "Pereira, Bogotá y Cali",
+  "condiciones": {
+    "cambios": "dos rondas sin costo",
+    "demo": "una canción"
+  },
+  "otros": [
+    {
+      "nombre": "Cara de Pez Lab",
+      "tipo": "productora"
+    },
+    {
+      "nombre": "Solsticio",
+      "tipo": "colectivo"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "reel",
+      "icono": "reel",
+      "etiqueta": "REEL_2026.MOV",
+      "etiquetaMovil": "Reel",
+      "menu": "Reel 2026",
+      "titulo": "Reproductor DEGA — REEL_2026.MOV"
+    },
+    {
+      "id": "trabajos",
+      "icono": "carpeta",
+      "etiqueta": "Trabajos",
+      "menu": "Trabajos",
+      "titulo": "C:\\DEGA\\Trabajos"
+    },
+    {
+      "id": "como-trabajo",
+      "icono": "documento",
+      "etiqueta": "Cómo trabajo",
+      "menu": "Cómo trabajo",
+      "titulo": "Cómo trabajo — DEGApedia, la enciclopedia del VJ — Navegador DEGA"
+    },
+    {
+      "id": "software",
+      "icono": "cd",
+      "etiqueta": "Software",
+      "menu": "Software",
+      "titulo": "Unidad de CD-ROM (D:) — Software"
+    },
+    {
+      "id": "titulos",
+      "icono": "cuadro",
+      "etiqueta": "Títulos",
+      "menu": "Títulos",
+      "titulo": "Títulos.exe — Galería 3D"
+    },
+    {
+      "id": "sobre-mi",
+      "icono": "ficha",
+      "etiqueta": "Sobre mí",
+      "menu": "Sobre mí",
+      "titulo": "Propiedades del sistema — Sobre mí"
+    },
+    {
+      "id": "contacto",
+      "icono": "sobre",
+      "etiqueta": "Contacto",
+      "menu": "Contacto",
+      "titulo": "Mensaje nuevo — Escríbeme para tu fecha"
+    },
+    {
+      "id": "papelera",
+      "icono": "papelera",
+      "etiqueta": "Papelera (bocetos)",
+      "menu": "Papelera",
+      "titulo": "Papelera (bocetos)",
+      "movil": false
+    },
+    {
+      "id": "pantalla",
+      "icono": "monitor",
+      "etiqueta": "Filtro CRT",
+      "menu": "Propiedades de pantalla",
+      "titulo": "Propiedades de pantalla",
+      "escritorio": false
+    }
+  ],
+  "arranque": {
+    "lineas": [
+      "DEGA BIOS v2.0  (C) 2000 DEGA",
+      "CPU: VISUALES EN VIVO @ 24 FPS ............ OK",
+      "Memoria: 640 K de ideas ................... OK",
+      "Unidad de CD-ROM (D:) ..................... 5 DISCOS",
+      "Cargando VJ.SYS ........................... OK",
+      "Cargando CRT.DRV .......................... OK",
+      "Iniciando DEGA OS 2000_"
+    ],
+    "lema": "VJ / DISEÑADOR AUDIOVISUAL"
+  },
+  "bienvenido": {
+    "titulo": "Bienvenido.exe",
+    "rec": "Cine y visuales en vivo",
+    "titular": "Haz que tu música se pueda ver",
+    "texto": "Soy DEGA, un VJ y diseñador audiovisual capaz de crear y diseñar el universo visual de tu música. ¿Qué esperas?",
+    "botonPrincipal": "ESCRÍBEME PARA TU FECHA",
+    "botonSecundario": "Ver trabajos",
+    "creditos": "FESTIVAL ESTÉREO PICNIC 2025 /// GANADOR · BATALLA DE LOS DJS · MEJOR MEZCLA VJ EN VIVO /// JULIANA QUÉDATE OTRO DÍA /// ZÁLIMA /// ROCKET BAND"
+  },
+  "guia": {
+    "nombre": "Dega",
+    "modelo": "assets/dega/dega.glb",
+    "menu": "¿En qué te ayudo?",
+    "crt": "El filtro CRT está encendido. Si lo quieres apagar, haz clic en «CRT», abajo a la derecha.",
+    "consejos": {
+      "reel": "Este es mi reel. Haz clic en el video para activar el sonido.",
+      "trabajos": "Pasa el mouse por un trabajo para ver un adelanto. Haz clic para abrirlo.",
+      "proyecto": "¿Te imaginas algo así para tu música? Te hago una demo de tu canción.",
+      "como-trabajo": "Aquí te cuento cómo trabajo, en cuatro pasos: escucho, propongo, adapto y opero.",
+      "software": "Haz clic en un CD para sacarlo de la caja. Con las flechas pasas de disco.",
+      "titulos": "Haz clic en un cuadro y la cámara viaja hasta él. Con Esc te alejas.",
+      "sobre-mi": "Esta es mi historia. Ahí mismo puedes descargar mi dossier.",
+      "contacto": "Cuéntame de tu show. Si quieres una demo, pega el enlace a tu canción.",
+      "pantalla": "Si tu equipo va lento, apaga aquí el filtro CRT.",
+      "papelera": "Aquí van los bocetos que no llegaron a la pantalla.",
+      "editor": "Lo marcado en rojo es lo que falta llenar. Cuando termines, dale GUARDAR y la página se recarga con tus cambios."
+    }
+  },
+  "videos": {
+    "base": "assets/videos/",
+    "nota": "Carpeta o dirección desde donde se sirven los videos. Si los subes a otro almacenamiento propio (por ejemplo Cloudflare R2 con tu dominio), cambia esto por la URL, terminada en /."
+  },
+  "reel": {
+    "archivo": "REEL_2026.MOV",
+    "video": "REEL_2026"
+  },
+  "papelera": {
+    "bocetos": [],
+    "vacia": "La papelera está vacía."
+  },
+  "sobreMi": {
+    "sistema": "DEGA OS 2000, edición VJ / diseñador audiovisual",
+    "registradoA": "Juan Torrado, @degadegadega",
+    "equipo": "visuales en vivo, videoclips y cine",
+    "foto": null,
+    "bio": [
+      "Soy Pablo Torrado alias \"DEGA\", soy un VJ y diseñador audiovisual bogotano. Descubrí los visuales en vivo gracias a una profesora que me puso a experimentar con GLMixer y me animó a competir en la Batalla de los DJs, donde gané a mejor mezcla VJ en vivo.",
+      "Después pasé por videoclips, cortometrajes y videoensayos, y volví al escenario en el Festival Estéreo Picnic 2025 con Juliana Quédate Otro Día, lo cual me permitió tener una conexión sólida con ellos y empezar a crear un universo visual narrativo que terminó concluyendo en el videoclip de \"La Culpa\" el cual está nominado a \"Mejor Videoclip Nacional\" en Bogoshorts. Hoy combino After Effects, Resolume y TouchDesigner para que los visuales y los videoclips no sean un acompañamiento, sino un universo propio que el público recuerde."
+    ],
+    "dossier": "assets/dossier.pdf",
+    "dispositivos": [
+      {
+        "grupo": "Premios",
+        "icono": "cuadro",
+        "items": [
+          "Ganador, Batalla de los DJs, mejor mezcla VJ en vivo, 2024",
+          {
+            "texto": "Nominado, 24.ª edición del festival Bogoshorts, «La Culpa»",
+            "ruta": "trabajos/la-culpa"
+          }
+        ]
+      },
+      {
+        "grupo": "Estudios",
+        "icono": "documento",
+        "items": [
+          "Diseño Audiovisual, UCP, 8.º semestre",
+          "Diplomado UNISARC 2023",
+          "Domestika 2026",
+          {
+            "texto": "Ver los títulos en la galería",
+            "ruta": "titulos"
+          }
+        ]
+      },
+      {
+        "grupo": "Colectivos y proyectos",
+        "icono": "carpeta",
+        "items": [
+          "Cara de Pez Lab (productora)",
+          "Solsticio (colectivo)"
+        ]
+      },
+      {
+        "grupo": "Shows destacados",
+        "icono": "reel",
+        "items": [
+          {
+            "texto": "FEP con Juliana Quédate Otro Día",
+            "ruta": "trabajos/fep-2025"
+          },
+          {
+            "texto": "Batalla de los DJs 2024",
+            "ruta": "trabajos/batalla-djs"
+          },
+          {
+            "texto": "La Culpa - Juliana Quédate Otro Día",
+            "ruta": "trabajos/la-culpa"
+          }
+        ]
+      },
+      {
+        "grupo": "Software instalado",
+        "icono": "cd",
+        "items": [
+          {
+            "texto": "Resolume Arena · TouchDesigner · After Effects · Premiere · Blender",
+            "ruta": "software"
+          }
+        ]
+      },
+      {
+        "grupo": "Ciudades",
+        "icono": "ficha",
+        "items": [
+          "Pereira, Bogotá y Cali"
+        ]
+      }
+    ]
+  },
+  "degapedia": {
+    "direccion": "C:\\DEGA\\DEGApedia\\como-trabajo.htm",
+    "titulo": "Cómo trabajo",
+    "subtitulo": "De DEGApedia, la enciclopedia del buen realizado audiovisual",
+    "ficha": [
+      {
+        "campo": "Nombre",
+        "valor": "Pablo Gaitán"
+      },
+      {
+        "campo": "Ocupación",
+        "valor": "VJ, diseñador audiovisual"
+      },
+      {
+        "campo": "Géneros",
+        "valor": "Indie rock, hard techno, pop alternativo"
+      },
+      {
+        "campo": "Herramientas",
+        "valor": "Resolume Arena, TouchDesigner, After Effects, Premiere, Blender"
+      },
+      {
+        "campo": "Premios",
+        "valor": "Ganador, Batalla de los DJs, mejor mezcla VJ en vivo (2024) - Nominado a \"Mejor Videoclip Nacional\" en Bogoshorts (2026)"
+      },
+      {
+        "campo": "Formación",
+        "valor": "Diseño Audiovisual, Universidad Católica de Pereira (8.º semestre, en curso); Diplomado en Cinematografía con enfoque rural, UNISARC (2023); Especialización en Escritura de guion cinematográfico profesional, Domestika (2026)"
+      },
+      {
+        "campo": "Ciudades",
+        "valor": "Pereira, Bogotá y Cali"
+      },
+      {
+        "campo": "Disponible",
+        "valor": "Desde noviembre de 2026"
+      }
+    ],
+    "foto": null,
+    "pieFoto": "Dega ganando",
+    "aviso": "",
+    "historial": [
+      {
+        "fecha": "2023",
+        "texto": "Diplomado en Cinematografía con enfoque rural, UNISARC."
+      },
+      {
+        "fecha": "2024",
+        "texto": "Ganador de la Batalla de los DJs, mejor mezcla VJ en vivo."
+      },
+      {
+        "fecha": "2025",
+        "texto": "Visuales para Juliana Quédate Otro Día en el Festival Estéreo Picnic."
+      },
+      {
+        "fecha": "2026",
+        "texto": "Nominado a \"Mejor Videoclip Nacional\" en Bogoshorts"
+      }
+    ],
+    "introduccion": [
+      "Dega es el nombre de VJ de Pablo Gaitán, un diseñador audiovisual capaz de crear un universo visual que abarca visuales en vivo, videoclips y otros tipos de piezas publicitarias. El trabaja cada proyecto en cuatro simples pasos: escuchar, proponer, diseñar y operar.",
+      "Descubrió los visuales en vivo experimentando con GLMixer y en 2024 ganó la Batalla de los DJs como mejor mezcla VJ en vivo, lo que lo llevó a realizar el show de visuales de Juliana Quédate Otro Día en el Festival Estéreo Picnic, con quienes posteriormente realizó el videoclip de \"La Culpa\" el cual está nominado a \"Mejor Videoclip Nacional\" en Bogoshorts"
+    ],
+    "secciones": [
+      {
+        "id": "escucho",
+        "titulo": "Escuchar",
+        "texto": "La parte más esencial de todo el proceso, conocer tu música, conectar con ella, y a partir de ello empezar a desglosarla, entender que querías contar con esa obra, por qué querías contarla, y empezar a indagar en todas esas imágenes que se van creando dentro de mi cabeza cuando escucho o pienso en esa canción.\n\nLuego me reúno contigo y me adentro en ese universo que tienes dentro de tu cabeza, te pregunto como ves tu esa canción, como te la imaginas que se ve y busco entenderla desde tu perspectiva para saber que quieres transmitirle al público. ",
+        "veaseTambien": {
+          "texto": "Reel 2026",
+          "ruta": "reel"
+        }
+      },
+      {
+        "id": "propongo",
+        "titulo": "Proponer",
+        "texto": "Acá yo empiezo a maquinar dentro de mi cabeza como darle forma a aquellas ideas sueltas que compartimos en la reunión y la vuelvo una propuesta visual, te doy un look para esa canción y te ejemplifico todo: la paleta de colores, la textura, mis referentes. Preparo todos los elementos para que tu te hagas una idea de como va a ser todo ese universo visual que va a darle vida visualmente a tu obra\n\nSi gusta se queda, si no, hay dos rondas más gratuitas para poder seguir proponiendo y seguir dandole forma a todo.",
+        "paleta": [
+          "#0000E8",
+          "#FFE500",
+          "#E30613",
+          "#F3EDDA",
+          "#14141B"
+        ],
+        "piePaleta": "Ejemplo de paleta para el look de \"La Culpa\""
+      },
+      {
+        "id": "adapto",
+        "titulo": "Diseñar",
+        "texto": "Este es el momento donde ocurre la verdadera acción. Acá la idea se vuelve tangible, todo lo propuesto comienza a cobrar vida, y tu, vas a ver cada uno de esos procesos, y vas a ser parte de ellos y poder ver con tus propios ojos como se crea la imagen, como se le da una nueva vida a tu música.\n\nCuando se acaba el proceso de diseño y esa obra ya está viva y es tangible, hay dos rondas de cambios gratuitas para poder ajustarla más a la visión que tienes tu de la imagen.",
+        "fichaTecnica": [
+          {
+            "campo": "Software",
+            "valor": "Resolume Arena, TouchDesigner, After Effects, Premiere, Blender"
+          },
+          {
+            "campo": "Equipo",
+            "valor": "Computador, dos cámaras, HDMI inalámbrico y dos controladores MIDI"
+          },
+          {
+            "campo": "Operación",
+            "valor": "En vivo"
+          },
+          {
+            "campo": "Ciudades",
+            "valor": "Pereira, Bogotá y Cali"
+          }
+        ]
+      },
+      {
+        "id": "opero",
+        "titulo": "Operar",
+        "texto": "Este último paso es el que más se disfruta, el día tan esperado. El videoclip se estrena, las visuales aparecen en tu show; Y aquel espectador que tanto amaba esa canción que hiciste, podrá verla, disfrutarla y ahondar más en aquello que generaba esa canción dentro de sí, haciendo que tenga un valor más grande para el poder ver aquello que tanto ama escuchar.",
+        "foto": null,
+        "pie": "[pie de foto: show y año]",
+        "veaseTambien": {
+          "texto": "Trabajos",
+          "ruta": "trabajos"
+        }
+      },
+      {
+        "id": "demo",
+        "titulo": "Demo para tu canción",
+        "texto": "Qué esperas a poder vivir esto, envíame una canción y te hago una demo visual, para que veas el resultado antes de decidir.",
+        "boton": "PEDIR UNA DEMO"
+      }
+    ],
+    "referencias": [
+      {
+        "titulo": "Reel 2026",
+        "fuente": "DEGA OS",
+        "ruta": "reel"
+      },
+      {
+        "titulo": "Festival Estéreo Picnic 2025",
+        "fuente": "Trabajos, DEGA OS",
+        "ruta": "trabajos/fep-2025"
+      },
+      {
+        "titulo": "Sobre mí",
+        "fuente": "Propiedades del sistema, DEGA OS",
+        "ruta": "sobre-mi"
+      }
+    ],
+    "categorias": [
+      "VJ",
+      "Diseño audiovisual",
+      "Visuales en vivo",
+      "Mixed media"
+    ],
+    "ultimaEdicion": "27 de octubre de 2026"
+  },
+  "mensajero": {
+    "estado": "Disponible para fechas desde noviembre 2026",
+    "pie": "RESPONDO EN 48 HORAS"
+  }
+}

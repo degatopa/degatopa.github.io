@@ -1,0 +1,66 @@
+{
+  "BATALLA_DJS": {
+    "duracion": 228.68,
+    "ancho": 1920,
+    "alto": 1080,
+    "bytes": 66708237,
+    "fotogramas": 6,
+    "variantes": []
+  },
+  "ENTRE_SABANAS": {
+    "duracion": 262.24,
+    "ancho": 1920,
+    "alto": 1080,
+    "bytes": 52378457,
+    "fotogramas": 6,
+    "variantes": []
+  },
+  "FEP_2025_ESCENARIO": {
+    "duracion": 2297.17,
+    "ancho": 480,
+    "alto": 360,
+    "bytes": 77293671,
+    "fotogramas": 6,
+    "variantes": []
+  },
+  "INMORTAL": {
+    "duracion": 255.2,
+    "ancho": 1852,
+    "alto": 1052,
+    "bytes": 35975658,
+    "fotogramas": 6,
+    "variantes": []
+  },
+  "JUGADOR": {
+    "duracion": 246.27,
+    "ancho": 1920,
+    "alto": 1080,
+    "bytes": 95453444,
+    "fotogramas": 6,
+    "variantes": []
+  },
+  "LA_CULPA": {
+    "duracion": 203,
+    "ancho": 1920,
+    "alto": 1080,
+    "bytes": 98389332,
+    "fotogramas": 6,
+    "variantes": []
+  },
+  "REEL_2026": {
+    "duracion": 75.99,
+    "ancho": 1440,
+    "alto": 1080,
+    "bytes": 57248435,
+    "fotogramas": 0,
+    "variantes": []
+  },
+  "SE7EN_REMAKE": {
+    "duracion": 130.13,
+    "ancho": 1920,
+    "alto": 1080,
+    "bytes": 44467355,
+    "fotogramas": 6,
+    "variantes": []
+  }
+}

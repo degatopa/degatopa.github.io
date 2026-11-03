@@ -1,0 +1,53 @@
+{
+  "sala": "SALA 01 · TÍTULOS",
+  "descripcion": "Sala 01: diplomas y reconocimientos",
+  "cuadros": [
+    {
+      "id": "unisarc-2023",
+      "encabezado": "DIPLOMADO",
+      "titulo": "Diplomado en Cinematografía con enfoque rural",
+      "corto": "Cinematografía con enfoque rural",
+      "institucion": "UNISARC",
+      "anio": "2023",
+      "imagen": null,
+      "linea": "",
+      "pared": "fondo"
+    },
+    {
+      "id": "batalla-djs-2024",
+      "encabezado": "GANADOR",
+      "titulo": "Mejor mezcla VJ en vivo",
+      "corto": "Ganador · Mejor mezcla VJ en vivo",
+      "institucion": "Batalla de los DJs",
+      "anio": "2024",
+      "detalle": "Ganador",
+      "imagen": null,
+      "linea": "",
+      "pared": "fondo",
+      "destacado": true
+    },
+    {
+      "id": "domestika-2026",
+      "encabezado": "ESPECIALIZACIÓN",
+      "titulo": "Especialización en Escritura de guion cinematográfico profesional",
+      "corto": "Escritura de guion cinematográfico profesional",
+      "institucion": "Domestika",
+      "anio": "2026",
+      "imagen": null,
+      "linea": "",
+      "pared": "fondo"
+    },
+    {
+      "id": "ucp-diseno-audiovisual",
+      "encabezado": "RESERVADO",
+      "titulo": "Diseño Audiovisual",
+      "corto": "Diseño Audiovisual ",
+      "institucion": "Universidad Católica de Pereira",
+      "anio": "En curso · 8.º semestre",
+      "imagen": null,
+      "linea": "",
+      "pared": "derecha",
+      "reservado": true
+    }
+  ]
+}
