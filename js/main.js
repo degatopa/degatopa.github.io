@@ -330,7 +330,7 @@ async function abrirEntrada() {
     }
     if (!prefs.obtener().globoVisto && prefs.obtener().crt) {
       prefs.guardar({ globoVisto: true });
-      setTimeout(() => guia.decir({ texto: sitio.guia.crt }), 1500);
+      setTimeout(() => guia.decir({ texto: sitio.guia.crtMovil ?? sitio.guia.crt }), 1500);
     }
     return;
   }

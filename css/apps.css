@@ -105,6 +105,24 @@
 .arranque__saltar input { width: 16px; height: 16px; margin: 0; accent-color: var(--amarillo); }
 .arranque__duracion { margin-left: auto; }
 
+/* En el celular todo se achica para que el registro no pise el logo y el pie quepa */
+@media (max-width: 767px) {
+  .arranque { padding: 16px 16px 12px; }
+  .arranque__registro { font-size: min(3.6vw, 18px); line-height: 1.35; overflow: hidden; }
+  .arranque__centro { margin-top: 0; gap: 6px; }
+  .arranque__logo { gap: 10px; }
+  .arranque__logo .marca { font-size: 76px; }
+  .arranque__os { font-size: 28px; white-space: nowrap; }
+  .arranque__lema { font-size: 18px; letter-spacing: 0.12em; text-align: center; }
+  .arranque__barra { margin-top: 20px; }
+  .arranque__estado { font-size: 18px; }
+  .arranque__entrar { font-size: 22px; margin-bottom: 10px; }
+  .arranque__pie { flex-wrap: wrap; justify-content: center; gap: 0 12px; font-size: 16px; }
+  .arranque__saltar { min-height: 44px; }
+  .arranque__saltar input { width: 20px; height: 20px; }
+  .arranque__duracion { margin-left: 0; }
+}
+
 /* ---------- Bienvenido.exe ---------- */
 
 .bienvenido {
@@ -1245,7 +1263,8 @@
 .estado__der { margin-left: auto; }
 
 @media (max-width: 767px) {
-  .sala { flex: none; aspect-ratio: 4 / 3; min-height: 0; }
+  /* La sala llena el alto que queda, así no sobra un espacio gris debajo */
+  .sala { flex: 1 0 auto; min-height: max(280px, 75vw); }
   .sala__modo { font-size: 22px; }
   .sala__ayuda, .sala__nombre { font-size: 15px; }
   .sala__nombre { top: auto; bottom: 10px; }
@@ -1404,7 +1423,7 @@
   .msg__campo--fila label { box-shadow: none; padding: 0; }
   .msg__campo--fila .msg__error, .msg__campo--fila .msg__ayuda { grid-column: 1; }
   .msg__etiqueta { box-shadow: none; padding: 4px 0; width: auto; }
-  .msg__fila { flex-direction: column; gap: 2px; }
+  .msg__fila { flex-direction: column; align-items: stretch; gap: 2px; }
   .msg__para { width: 100%; }
   .msg .campo { min-height: 44px; font-size: 16px; }
   .msg__abajo { flex-direction: column; align-items: stretch; }

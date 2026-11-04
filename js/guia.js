@@ -166,6 +166,11 @@ export function crearGuia({ datos, navegar, prefs }) {
     callar();
     botonPez.focus();
   });
+  // En el celular el globo tapa media pantalla: se cierra al tocar cualquier otra parte.
+  const movil = window.matchMedia('(max-width: 767px)');
+  document.addEventListener('pointerdown', (e) => {
+    if (movil.matches && !globo.hidden && !el.contains(e.target)) callar();
+  });
 
   return { decir, callar, presentar, consejo };
 }

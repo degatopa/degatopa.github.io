@@ -606,7 +606,10 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), textarea {
 
 @media (max-width: 767px) {
   .guia { right: 6px; }
-  .guia__pez { width: 160px; height: 120px; }
+  /* En el celular el pez queda encima de los íconos: a tamaño 1:1 tapa menos */
+  .guia__pez { width: 120px; height: 90px; }
+  /* Las ventanas ocupan toda la pantalla: ahí el pez taparía el contenido, así que espera en el inicio */
+  body:has(.ventanas > .ventana:not([hidden])) .guia { display: none; }
   .guia__globo { margin-right: 10px; width: calc(100vw - 20px); }
   .guia__globo::before { right: 44px; }
   .guia__globo::after { right: 46px; }
@@ -722,7 +725,8 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), textarea {
     grid-template-columns: repeat(4, 1fr);
     gap: 14px 4px;
     max-height: none;
-    padding: 20px 8px 24px;
+    /* Abajo queda espacio para que la última fila suba por encima del pez */
+    padding: 20px 8px 104px;
   }
   .icono { width: 100%; min-height: 44px; }
   .icono__texto[data-escritorio], .solo-escritorio { display: none; }
@@ -748,6 +752,15 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), textarea {
   .ventana input[type="range"]::-moz-range-thumb { width: 22px; height: 36px; }
   .ventana__boton svg { height: 10px; }
   .ventana__atras { display: grid; }
+  /* Bienvenido.exe va dentro de la portada, no flota: sin la posición de las ventanas de arriba */
+  .ventana.ventana--fija {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  .ventana--fija .ventana__titulo { height: 36px; }
   .ventana__boton[data-accion="minimizar"],
   .ventana__boton[data-accion="maximizar"] { display: none; }
 
