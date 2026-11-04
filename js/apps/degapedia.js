@@ -13,12 +13,12 @@ export function crear(cuerpo, { datos, navegar, ventana, wm, cargarFuentes }) {
   const w = datos.sitio.degapedia;
   const ancla = (s) => `${id}-${s}`;
 
-  // Introducción: "Dega" y "Juan Torrado" en negrita, los cuatro pasos enlazan a su sección y cada párrafo lleva su referencia.
+  // Introducción: "Dega" y "Pablo Gaitán" en negrita, los cuatro pasos enlazan a su sección y cada párrafo lleva su referencia.
   const intro = w.introduccion
     .map((p, i) => {
       let html = t(p)
         .replace('Dega', '<b>Dega</b>')
-        .replace('Juan Torrado', '<b>Juan Torrado</b>')
+        .replace('Pablo Gaitán', '<b>Pablo Gaitán</b>')
         .replace(PASOS, (paso) => `<a href="#/como-trabajo" data-ancla="${paso}">${paso}</a>`);
       if (w.referencias[i]) html += `<sup><a href="#/como-trabajo" data-ancla="referencias">[${i + 1}]</a></sup>`;
       return `<p>${html}</p>`;

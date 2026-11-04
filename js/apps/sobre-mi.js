@@ -24,7 +24,7 @@ export async function crear(cuerpo, { datos, navegar, ventana, wm, esMovil }) {
       <div class="panel-pestana sistema__panel">
         <div role="tabpanel" id="${id}-p0" aria-labelledby="${id}-t0" class="sistema__general">
           <div class="sistema__cabeza">
-            <div class="sistema__foto">${s.foto ? `<img src="${t(s.foto)}" alt="Juan Torrado, Dega">` : marcador('[ TU FOTO ]', 'marcador--azul marcador--retrato')}</div>
+            <div class="sistema__foto">${s.foto ? `<img src="${t(s.foto)}" alt="Pablo Gaitán, Dega">` : marcador('[ TU FOTO ]', 'marcador--azul marcador--retrato')}</div>
             <div class="sistema__datos">
               <p class="sistema__logo"><span class="marca">Dega</span> <span>OS 2000</span></p>
               <dl>

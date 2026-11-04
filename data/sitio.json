@@ -1,7 +1,7 @@
 {
   "marca": {
     "nombre": "Dega",
-    "nombreReal": "Juan Torrado",
+    "nombreReal": "Pablo Gaitán",
     "sistema": "DEGA OS 2000",
     "rol": "VJ / Diseñador audiovisual",
     "usuario": "@degadegadega"
@@ -164,11 +164,11 @@
   },
   "sobreMi": {
     "sistema": "DEGA OS 2000, edición VJ / diseñador audiovisual",
-    "registradoA": "Juan Torrado, @degadegadega",
+    "registradoA": "Pablo Gaitán, @degadegadega",
     "equipo": "visuales en vivo, videoclips y cine",
     "foto": "assets/fotos/dega-perfil.webp",
     "bio": [
-      "Soy Pablo Torrado alias \"DEGA\", soy un VJ y diseñador audiovisual bogotano. Descubrí los visuales en vivo gracias a una profesora que me puso a experimentar con GLMixer y me animó a competir en la Batalla de los DJs, donde gané a mejor mezcla VJ en vivo.",
+      "Soy Pablo Gaitán alias \"DEGA\", soy un VJ y diseñador audiovisual bogotano. Descubrí los visuales en vivo gracias a una profesora que me puso a experimentar con GLMixer y me animó a competir en la Batalla de los DJs, donde gané a mejor mezcla VJ en vivo.",
       "Después pasé por videoclips, cortometrajes y videoensayos, y volví al escenario en el Festival Estéreo Picnic 2025 con Juliana Quédate Otro Día, lo cual me permitió tener una conexión sólida con ellos y empezar a crear un universo visual narrativo que terminó concluyendo en el videoclip de \"La Culpa\" el cual está nominado a \"Mejor Videoclip Nacional\" en Bogoshorts. Hoy combino After Effects, Resolume y TouchDesigner para que los visuales y los videoclips no sean un acompañamiento, sino un universo propio que el público recuerde."
     ],
     "dossier": "assets/dossier.pdf",
