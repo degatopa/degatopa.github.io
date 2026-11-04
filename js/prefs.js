@@ -6,7 +6,7 @@ const POR_DEFECTO = {
   crt: true,
   intensidad: 60, // 0 = suave, 100 = fuerte
   vhs: true,
-  sonidos: false,
+  sonidos: true,
   saltarIntro: false,
   globoVisto: false,
 };
@@ -19,7 +19,11 @@ function leer() {
   }
 }
 
-let actual = { ...POR_DEFECTO, ...leer() };
+// Versión 2: los sonidos del sistema pasaron a venir encendidos; se ignora el "apagado" guardado antes.
+const VERSION = 2;
+const guardadas = leer();
+if ((guardadas.version ?? 1) < VERSION) delete guardadas.sonidos;
+let actual = { ...POR_DEFECTO, ...guardadas, version: VERSION };
 const oyentes = new Set();
 
 export const obtener = () => ({ ...actual });

@@ -65,6 +65,30 @@ export function iniciarArranque({ prefs, forzar = false }) {
   musica.play().catch(() => {
     for (const evento of ['pointerdown', 'keydown']) window.addEventListener(evento, tocar, { signal: esperaGesto.signal });
   });
+  // Si un video empieza a sonar mientras suena la música de arranque, el video baja de volumen
+  // hasta que la música termina y después sube despacio, para que no se encimen.
+  const bajados = new Map(); // video → su volumen de antes
+  const esperaVideo = new AbortController();
+  const bajarVideo = (e) => {
+    const video = e.target;
+    if (!(video instanceof HTMLVideoElement) || video.muted || musica.paused || bajados.has(video)) return;
+    bajados.set(video, video.volume);
+    video.volume = Math.min(video.volume, 0.15);
+  };
+  for (const evento of ['playing', 'volumechange']) document.addEventListener(evento, bajarVideo, { capture: true, signal: esperaVideo.signal });
+  const subirVideos = () => {
+    esperaVideo.abort();
+    bajados.forEach((antes, video) => {
+      const desde = video.volume;
+      let i = 0;
+      const subir = setInterval(() => {
+        video.volume = desde + (antes - desde) * (++i / 10);
+        if (i === 10) clearInterval(subir);
+      }, 60);
+    });
+  };
+  musica.addEventListener('ended', subirVideos);
+  musica.addEventListener('error', subirVideos);
 
   const objetivo = () => (pasos.size / Object.keys(PASOS).length) * 100;
 

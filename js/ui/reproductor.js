@@ -8,6 +8,35 @@ const COLORES = ['#2233FF', '#0000E8', '#14141B', '#FFE500', '#E30613', '#2A1250
 // Sobre estos fondos el texto de "sin señal" va en tinta oscura.
 const CLAROS = new Set(['#FFE500', '#E8E2CE', '#39D353']);
 
+// Solo suena un video a la vez: al reproducir uno, los demás se pausan.
+const videos = new Set();
+
+/**
+ * Reproduce con sonido. Si el navegador no deja sonar audio antes de que el visitante toque la página,
+ * arranca en silencio y el sonido se activa solo con el primer clic, toque o tecla.
+ */
+function reproducirConSonido(video, alActivar) {
+  video.muted = false;
+  return video.play().catch((error) => {
+    if (error.name !== 'NotAllowedError') return;
+    video.muted = true;
+    video.play().catch(() => {});
+    const espera = new AbortController();
+    const activar = () => {
+      // Chrome solo deja quitar el silencio durante un gesto real (no al terminar de desplazar la página).
+      if (navigator.userActivation && !navigator.userActivation.isActive) return;
+      espera.abort();
+      if (!video.isConnected || !video.muted) return;
+      video.muted = false;
+      if (video.paused) video.play().catch(() => {});
+      alActivar();
+    };
+    for (const evento of ['click', 'touchend', 'keydown']) {
+      window.addEventListener(evento, activar, { capture: true, signal: espera.signal });
+    }
+  });
+}
+
 let manifiesto;
 /** Datos de los videos codificados (assets/videos/videos.json, lo escribe scripts/codificar-videos.sh). */
 export function cargarManifiesto() {
@@ -59,7 +88,7 @@ let n = 0;
  * @param {number} [o.indice]
  * @param {'completo'|'proyecto'|'compacto'} [o.modo]  completo: con menú, LCD, lista y barra de estado;
  *                                proyecto: pantalla y controles; compacto: solo la pantalla
- * @param {boolean} [o.autoplay]   arranca solo, silenciado (no si el visitante pidió menos movimiento)
+ * @param {boolean} [o.autoplay]   arranca solo, con sonido (no si el visitante pidió menos movimiento)
  * @param {boolean} [o.bucle]
  * @param {string} [o.creditos]    texto que se desplaza en la pantalla LCD
  * @param {HTMLElement} [o.teclas] elemento que escucha los atajos (por defecto, la pantalla)
@@ -160,7 +189,7 @@ export async function crearReproductor(raiz, o) {
   };
 
   video.loop = o.bucle ?? true;
-  video.muted = true;
+  video.muted = false;
   video.volume = 0.8;
 
   if (completo && o.creditos) {
@@ -187,7 +216,7 @@ export async function crearReproductor(raiz, o) {
     if (info) {
       video.poster = rutaVideo(item.video, '-portada.webp');
       video.innerHTML = fuentes(item.video, info);
-      if (reproducir) video.play().catch(() => {});
+      if (reproducir) reproducirConSonido(video, () => (activadoEn = performance.now()));
     } else {
       video.removeAttribute('poster');
     }
@@ -272,8 +301,11 @@ export async function crearReproductor(raiz, o) {
   });
 
   // Clic en la pantalla: si está en silencio, activa el sonido; si no, pausa o reproduce.
+  // El clic que acaba de activar el sonido solo (ver reproducirConSonido) no pausa el video.
+  let activadoEn = 0;
+  const recienActivado = () => performance.now() - activadoEn < 600;
   pantalla.addEventListener('click', () => {
-    if (!hayVideo()) return;
+    if (!hayVideo() || recienActivado()) return;
     if (video.muted && !video.paused) alternarSonido();
     else alternar();
   });
@@ -286,7 +318,7 @@ export async function crearReproductor(raiz, o) {
     if (tecla === ' ' && !campo && !boton) alternar();
     else if (tecla === 'ArrowRight' && !campo) saltar(5);
     else if (tecla === 'ArrowLeft' && !campo) saltar(-5);
-    else if (tecla === 'm' && !campo) alternarSonido();
+    else if (tecla === 'm' && !campo) recienActivado() || alternarSonido();
     else if (tecla === 'f' && !campo) pantallaCompleta();
     else return;
     e.preventDefault();
@@ -391,6 +423,8 @@ export async function crearReproductor(raiz, o) {
   video.addEventListener('waiting', () => (osd.estado.textContent = 'BUSCANDO…'));
   video.addEventListener('playing', pintarEstado);
   video.addEventListener('volumechange', pintarEstado);
+  videos.add(video);
+  video.addEventListener('play', () => videos.forEach((otro) => otro !== video && !otro.paused && otro.pause()));
   const dejar = prefs.suscribir(pintarEstado);
 
   cargar(indice, o.autoplay && !reducido());
@@ -400,6 +434,7 @@ export async function crearReproductor(raiz, o) {
     cargar,
     destruir() {
       dejar();
+      videos.delete(video);
       video.pause();
       video.removeAttribute('src');
       video.replaceChildren();

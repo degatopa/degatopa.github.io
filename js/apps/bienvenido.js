@@ -31,7 +31,7 @@ export function crear(cuerpo, { datos, navegar }) {
   cuerpo.append(el);
 }
 
-/** Bloque de la portada móvil: marco de ventana, reel silenciado en bucle, titular y botón. */
+/** Bloque de la portada móvil: marco de ventana, reel en bucle con sonido, titular y botón. */
 export async function crearMovil(contenedor, { datos, navegar }) {
   const b = datos.sitio.bienvenido;
   contenedor.innerHTML = `

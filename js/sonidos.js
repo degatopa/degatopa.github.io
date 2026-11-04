@@ -1,5 +1,5 @@
 // Sonidos del sistema: tonos cortos sintetizados en el navegador, a volumen bajo.
-// Vienen apagados; se encienden en Propiedades de pantalla.
+// Vienen encendidos; se apagan en Propiedades de pantalla.
 import { obtener } from './prefs.js';
 
 let contexto;
