@@ -37,7 +37,7 @@ const APPS = {
   titulos: { modulo: './apps/titulos.js', ancho: 1240, alto: 780, x: 50, y: 14 },
   'sobre-mi': { modulo: './apps/sobre-mi.js', ancho: 720, alto: 760, x: 100, y: 24, botones: ['ayuda', 'cerrar'] },
   contacto: { modulo: './apps/contacto.js', ancho: 860, alto: 780, x: 100, y: 20 },
-  papelera: { modulo: './apps/papelera.js', ancho: 420, alto: 300 },
+  'hoja-de-vida': { modulo: './apps/hoja-de-vida.js', ancho: 780, alto: 760, x: 110, y: 20 },
   pantalla: { modulo: './apps/pantalla.js', ancho: 640, alto: 640, botones: ['ayuda', 'cerrar'] },
   // Solo en local, con el servidor de scripts/servir.mjs (ver editorDisponible).
   editor: { modulo: './apps/editor.js', ancho: 1120, alto: 760, x: 70, y: 16, titulo: 'Editor de contenido', icono: 'documento' },

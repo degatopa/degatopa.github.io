@@ -155,26 +155,6 @@ export const ICONOS = {
       VACIA, VACIA, VACIA,
     ],
   },
-  papelera: {
-    paleta: { k: '#404040', l: '#DFDFDF', g: '#9A9A9A' },
-    filas: [
-      VACIA,
-      '......kkkk......',
-      '..kkkkkkkkkkkk..',
-      '..kllllllllllk..',
-      '..kkkkkkkkkkkk..',
-      '...klglglglgk...',
-      '...klglglglgk...',
-      '...klglglglgk...',
-      '...klglglglgk...',
-      '...klglglglgk...',
-      '...klglglglgk...',
-      '...klglglglgk...',
-      '...klglglglgk...',
-      '...kkkkkkkkkk...',
-      VACIA, VACIA,
-    ],
-  },
   monitor: {
     paleta: { g: '#C8C4BC', k: '#404040', b: '#0000E8', B: '#3355FF', L: '#39D353' },
     filas: [

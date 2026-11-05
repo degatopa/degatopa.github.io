@@ -93,12 +93,11 @@
       "titulo": "Mensaje nuevo — Escríbeme para tu fecha"
     },
     {
-      "id": "papelera",
-      "icono": "papelera",
-      "etiqueta": "Papelera (bocetos)",
-      "menu": "Papelera",
-      "titulo": "Papelera (bocetos)",
-      "movil": false
+      "id": "hoja-de-vida",
+      "icono": "documento",
+      "etiqueta": "Hoja de vida",
+      "menu": "Hoja de vida",
+      "titulo": "Hoja de vida — Pablo Gaitán"
     },
     {
       "id": "pantalla",
@@ -146,7 +145,7 @@
       "sobre-mi": "Esta es mi historia. Ahí mismo puedes descargar mi dossier.",
       "contacto": "Cuéntame de tu show. Si quieres una demo, pega el enlace a tu canción.",
       "pantalla": "Si tu equipo va lento, apaga aquí el filtro CRT.",
-      "papelera": "Aquí van los bocetos que no llegaron a la pantalla.",
+      "hoja-de-vida": "Esta es mi hoja de vida. Con el botón amarillo la descargas en PDF.",
       "editor": "Lo marcado en rojo es lo que falta llenar. Cuando termines, dale GUARDAR y la página se recarga con tus cambios."
     }
   },
@@ -158,9 +157,92 @@
     "archivo": "REEL_2026.MOV",
     "video": "REEL_2026"
   },
-  "papelera": {
-    "bocetos": [],
-    "vacia": "La papelera está vacía."
+  "hojaDeVida": {
+    "nombre": "Pablo Gaitán",
+    "cargo": "Productor Audiovisual",
+    "pdf": "assets/hoja-de-vida.pdf",
+    "edad": "20 años",
+    "perfil": [
+      "Estudiante de octavo semestre de Diseño Audiovisual en la Universidad Católica de Pereira, con experiencia en ingeniería de pantallas en eventos en vivo y desarrollo de proyectos creativos. He trabajado como operador de visuales, sonido, cámaras y montaje técnico, participando en eventos institucionales, corporativos y musicales.",
+      "Me caracterizo por ser una persona creativa, analítica y resolutiva, capaz de responder de manera eficiente en escenarios de alta presión, así mismo disfruto de encontrar soluciones innovadoras ante los desafíos técnicos y creativos, aportando así ideas que fortalezcan cada producción, combinando una visión artística con un enfoque práctico y organizado."
+    ],
+    "educacion": [
+      {
+        "titulo": "Tecnología en Producción de Imagen y Sonido | En Curso",
+        "detalle": "Universidad Católica de Pereira | 2025-1 a 2025-2"
+      },
+      {
+        "titulo": "Técnica Profesional en Vídeo, Disc-Jockey y Sonido | Finalizado",
+        "detalle": "Universidad Católica de Pereira | 2023-1 a 2024-2"
+      },
+      {
+        "titulo": "Diplomado en cinematografía con enfoque en lo rural | Finalizado",
+        "detalle": "Unisarc - Smoke Films | 2023"
+      },
+      {
+        "titulo": "Profesional en Diseño Audiovisual | En Curso",
+        "detalle": "Universidad Católica de Pereira | 2026-1 a Actualidad"
+      }
+    ],
+    "experiencia": [
+      {
+        "titulo": "Altura Soluciones | Producción Audiovisual para Eventos (1 año y medio)",
+        "puntos": [
+          "Operación de pantallas LED y sistemas de visuales para eventos corporativos y musicales.",
+          "Montaje y configuración de equipos audiovisuales.",
+          "Participación en eventos para la Secretaría de Deporte de Pereira y el partido MIRA.",
+          "Operación de cámaras para transmisiones y registro audiovisual."
+        ]
+      },
+      {
+        "titulo": "Juliana Quédate Otro Día | Producción Audiovisual (2 años)",
+        "puntos": [
+          "Desarrollo del show visual para el Festival Estéreo Picnic y el lanzamiento de su segundo álbum.",
+          "Planeación de conceptos visuales para conciertos, videoclips y lanzamientos musicales.",
+          "Escritura, dirección y producción del videoclip \"La Culpa\", el cual fue nominado a mejor videoclip en Bogoshorts."
+        ]
+      }
+    ],
+    "competencias": [
+      {
+        "titulo": "Postproducción audiovisual, Imagen y Audio | 4 años",
+        "puntos": [
+          "Dominio de software de edición: Adobe Premiere, After Effects y DaVinci Resolve.",
+          "Bajo el ámbito de audio, Adobe Audition y Reaper.",
+          "Bajo el ámbito de eventos en vivo, Arena Resolume 7, Touch Designer y OBS."
+        ]
+      },
+      {
+        "titulo": "Departamento creativo y dirección | 3 años",
+        "puntos": [
+          {
+            "destacado": "Diseño y ejecución de eventos en vivo",
+            "texto": "un abanico amplio que abarca desde el montaje de eventos, pasando por la ingeniería de pantallas, y la ejecución y realización de visuales en eventos en vivo."
+          },
+          {
+            "destacado": "Construcción de referencias visuales",
+            "texto": "experiencia sólida en la creación de moodboards, integrando referentes visuales provenientes del cine, la música, la moda, la fotografía, el arte contemporáneo y la cultura audiovisual."
+          },
+          {
+            "destacado": "Escritura, Dirección y Producción Audiovisual",
+            "texto": "escritura, planificación y organización detallada de los procesos de preproducción, producción y postproducción en obras audiovisuales, ofreciendo un amplio conocimiento de los procesos de realización audiovisual y de sus distintas maneras de funcionar."
+          }
+        ]
+      }
+    ],
+    "habilidades": [
+      "Creatividad e innovación",
+      "Resolución de problemas",
+      "Trabajo bajo presión",
+      "Adaptabilidad",
+      "Organización",
+      "Comunicación asertiva",
+      "Trabajo en equipo",
+      "Aprendizaje rápido",
+      "Improvisación",
+      "Liderazgo",
+      "Pensamiento analítico"
+    ]
   },
   "sobreMi": {
     "sistema": "DEGA OS 2000, edición VJ / diseñador audiovisual",

@@ -80,7 +80,7 @@ export function crear(cuerpo, { datos, navegar, ventana, wm, cargarFuentes }) {
               <ul>
                 <li><a href="#/como-trabajo" data-ancla="arriba">Portada</a></li>
                 ${datos.sitio.secciones
-                  .filter((s) => !['como-trabajo', 'papelera', 'pantalla'].includes(s.id))
+                  .filter((s) => !['como-trabajo', 'pantalla'].includes(s.id))
                   .map((s) => `<li><a href="#/${s.id}">${t(s.menu)}</a></li>`)
                   .join('')}
               </ul>

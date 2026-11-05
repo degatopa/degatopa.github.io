@@ -114,12 +114,12 @@ export async function crear(cuerpo, { ventana }) {
       { grupo: 'Cómo trabajo', items: [nodo('degapedia', 'DEGApedia', 'sitio', ['degapedia'])] },
       { grupo: 'Software', items: software.discos.map((d, i) => nodo(`s:${d.id}`, d.nombre, 'software', ['discos', i])) },
       { grupo: 'Títulos', items: [nodo('sala', 'Sala', 'titulos', [], ['sala', 'descripcion']), ...titulos.cuadros.map((c, i) => nodo(`t:${c.id}`, c.titulo, 'titulos', ['cuadros', i]))] },
-      { grupo: 'Sobre mí', items: [nodo('sobremi', 'Propiedades del sistema', 'sitio', ['sobreMi'])] },
+      { grupo: 'Sobre mí', items: [nodo('sobremi', 'Propiedades del sistema', 'sitio', ['sobreMi']), nodo('hojaDeVida', 'Hoja de vida', 'sitio', ['hojaDeVida'])] },
       {
         grupo: 'Contacto',
         items: [nodo('contacto', 'Datos y formulario', 'sitio', ['contacto']), nodo('mensajero', 'DEGA Mensajero', 'sitio', ['mensajero']), nodo('general', 'Base, condiciones y colectivos', 'sitio', [], ['base', 'condiciones', 'otros'])],
       },
-      { grupo: 'Sitio', items: [nodo('meta', 'Título para buscadores y redes', 'sitio', ['meta']), nodo('papelera', 'Papelera (bocetos)', 'sitio', ['papelera']), nodo('videos', 'Videos', 'sitio', ['videos'])] },
+      { grupo: 'Sitio', items: [nodo('meta', 'Título para buscadores y redes', 'sitio', ['meta']), nodo('videos', 'Videos', 'sitio', ['videos'])] },
     ];
   }
   const objetoDe = (n) => n.ruta.reduce((o, k) => o[k], copia[n.archivo]);

@@ -1491,17 +1491,40 @@
   .ed__total { margin-left: 0; }
 }
 
-/* ---------- Papelera ---------- */
+/* ---------- Hoja de vida ---------- */
 
-.papelera { height: 100%; overflow: auto; }
-.papelera__vacia { margin: 0; padding: 40px 16px; color: var(--bisel-medio); text-align: center; }
-.papelera__lista {
-  list-style: none;
-  margin: 0;
-  padding: 10px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-  gap: 10px;
+.hoja { height: 100%; display: flex; flex-direction: column; gap: 6px; padding: 6px; }
+.hoja__barra { flex: none; display: flex; justify-content: flex-end; }
+.hoja__barra .btn-amarillo { display: inline-flex; align-items: center; gap: 6px; color: var(--tinta); text-decoration: none; }
+.hoja__visor { flex: 1; min-height: 0; overflow: auto; padding: 14px; background: var(--bisel-medio); }
+.hoja__pagina {
+  --hoja-morado: #3F0A82;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 32px 36px;
+  background: var(--bisel-blanco);
+  box-shadow: 3px 3px 0 var(--bisel-oscuro);
+  color: var(--tinta);
+  font: 15px/1.4 var(--f-enciclopedia);
+}
+.hoja__pagina p, .hoja__pagina ul, .hoja__pagina h3, .hoja__pagina h4, .hoja__pagina h5 { margin: 0; }
+.hoja__pagina p + p { margin-top: 6px; }
+.hoja__pagina a { color: inherit; }
+.hoja__cabeza { padding-bottom: 14px; text-align: center; }
+.hoja__nombre { color: var(--hoja-morado); font-size: 30px; line-height: 1.15; }
+.hoja__cargo { font-size: 20px; }
+.hoja__bloque { display: grid; grid-template-columns: 124px 1fr; gap: 14px; padding: 14px 0; border-top: 2px solid var(--hoja-morado); }
+.hoja__seccion { color: var(--hoja-morado); font-size: 19px; line-height: 1.1; }
+.hoja__titulo { margin-top: 10px !important; color: var(--hoja-morado); font-size: 15px; }
+.hoja__titulo:first-child { margin-top: 0 !important; }
+.hoja__puntos { padding-left: 18px; }
+
+@media (max-width: 767px) {
+  .hoja__barra .btn-amarillo { flex: 1; justify-content: center; min-height: 44px; }
+  .hoja__visor { padding: 8px; }
+  .hoja__pagina { padding: 20px 16px; font-size: 16px; }
+  .hoja__nombre { font-size: 26px; }
+  .hoja__bloque { grid-template-columns: 1fr; gap: 8px; }
 }
 
 /* ---------- Propiedades de pantalla ---------- */
