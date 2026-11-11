@@ -1,4 +1,12 @@
 {
+  "ANHELO_MORTALIDAD": {
+    "duracion": 97.28,
+    "ancho": 1920,
+    "alto": 1080,
+    "bytes": 28169748,
+    "fotogramas": 6,
+    "variantes": []
+  },
   "BATALLA_DJS": {
     "duracion": 228.68,
     "ancho": 1920,
@@ -23,6 +31,14 @@
     "fotogramas": 6,
     "variantes": []
   },
+  "GATO_DE_NOCHE": {
+    "duracion": 749.33,
+    "ancho": 1280,
+    "alto": 720,
+    "bytes": 85944147,
+    "fotogramas": 6,
+    "variantes": []
+  },
   "INMORTAL": {
     "duracion": 255.2,
     "ancho": 1852,
@@ -44,6 +60,22 @@
     "ancho": 1920,
     "alto": 1080,
     "bytes": 98389332,
+    "fotogramas": 6,
+    "variantes": []
+  },
+  "LEON_VENTANA": {
+    "duracion": 100.64,
+    "ancho": 848,
+    "alto": 480,
+    "bytes": 4878200,
+    "fotogramas": 6,
+    "variantes": []
+  },
+  "PRA_MIM": {
+    "duracion": 331.91,
+    "ancho": 1920,
+    "alto": 1080,
+    "bytes": 86374918,
     "fotogramas": 6,
     "variantes": []
   },

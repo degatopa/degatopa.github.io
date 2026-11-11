@@ -132,27 +132,6 @@
       "creditos": []
     },
     {
-      "id": "touchdesigner",
-      "archivo": "TOUCHDESIGNER_LOOPS.MOV",
-      "video": "TOUCHDESIGNER_LOOPS",
-      "titulo": "Experimentos en tiempo real",
-      "artista": "Dega",
-      "tipo": "Experimental",
-      "filtro": "En vivo",
-      "fecha": "2024-2026",
-      "idea": "Experimentación de imagen a través de touch designer",
-      "rol": "VJ",
-      "herramientas": [
-        "TouchDesigner",
-        "Blender"
-      ],
-      "operacion": null,
-      "pantalla": null,
-      "frase": null,
-      "fotos": [],
-      "creditos": []
-    },
-    {
       "id": "se7en",
       "archivo": "SE7EN_REMAKE.MOV",
       "video": "SE7EN_REMAKE",
@@ -243,6 +222,29 @@
       "rol": "Director, Guionista, Productor y Editor",
       "herramientas": [
         "Premiere"
+      ],
+      "operacion": null,
+      "pantalla": null,
+      "frase": null,
+      "fotos": [],
+      "creditos": []
+    }
+  ],
+  "guardados": [
+    {
+      "id": "touchdesigner",
+      "archivo": "TOUCHDESIGNER_LOOPS.MOV",
+      "video": "TOUCHDESIGNER_LOOPS",
+      "titulo": "Experimentos en tiempo real",
+      "artista": "Dega",
+      "tipo": "Experimental",
+      "filtro": "En vivo",
+      "fecha": "2024-2026",
+      "idea": "Experimentación de imagen a través de touch designer",
+      "rol": "VJ",
+      "herramientas": [
+        "TouchDesigner",
+        "Blender"
       ],
       "operacion": null,
       "pantalla": null,
