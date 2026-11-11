@@ -1196,7 +1196,8 @@
   background: repeating-linear-gradient(135deg, #E9E3CF 0 6px, #B9B3A0 6px 9px);
 }
 .cuadro--derecha { transform: perspective(520px) rotateY(-52deg); transform-origin: left center; }
-.cuadro--derecha .cuadro__cuerda { display: none; }
+.cuadro--izquierda { transform: perspective(520px) rotateY(52deg); transform-origin: right center; }
+.cuadro--derecha .cuadro__cuerda, .cuadro--izquierda .cuadro__cuerda { display: none; }
 
 .placa {
   position: absolute;
@@ -1234,6 +1235,7 @@
 .minimapa__c { width: 22px; height: 16px; background: #777; }
 .minimapa__c--grande { width: 34px; height: 24px; }
 .minimapa__c--lado { width: 10px; height: 20px; margin-left: 8px; }
+.minimapa__c--izquierda { margin: 0 8px 0 0; }
 .minimapa__c.actual { background: var(--amarillo); }
 .minimapa__aqui { color: var(--amarillo); }
 

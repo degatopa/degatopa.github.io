@@ -3,13 +3,14 @@
   "descripcion": "Sala 01: diplomas y reconocimientos",
   "cuadros": [
     {
-      "id": "unisarc-2023",
-      "encabezado": "DIPLOMADO",
-      "titulo": "Diplomado en Cinematografía con enfoque rural",
-      "corto": "Cinematografía con enfoque rural",
-      "institucion": "UNISARC",
-      "anio": "2023",
-      "imagen": null,
+      "id": "bogoshorts-2026",
+      "encabezado": "NOMINADO",
+      "titulo": "Mejor Videoclip Nacional",
+      "corto": "Nominado · Mejor Videoclip Nacional",
+      "institucion": "Festival Internacional Bogoshorts",
+      "anio": "2026",
+      "detalle": "Nominado con «La Culpa» de Juliana Quédate Otro Día",
+      "imagen": "assets/titulos/bogoshorts-la-culpa.webp",
       "linea": "",
       "pared": "fondo"
     },
@@ -21,33 +22,21 @@
       "institucion": "Batalla de los DJs",
       "anio": "2024",
       "detalle": "Ganador",
-      "imagen": null,
+      "imagen": "assets/titulos/batalla-djs-2024.webp",
       "linea": "",
       "pared": "fondo",
       "destacado": true
     },
     {
-      "id": "domestika-2026",
-      "encabezado": "ESPECIALIZACIÓN",
-      "titulo": "Especialización en Escritura de guion cinematográfico profesional",
-      "corto": "Escritura de guion cinematográfico profesional",
-      "institucion": "Domestika",
-      "anio": "2026",
-      "imagen": null,
-      "linea": "",
-      "pared": "fondo"
-    },
-    {
       "id": "ucp-diseno-audiovisual",
-      "encabezado": "RESERVADO",
+      "encabezado": "EN CURSO",
       "titulo": "Diseño Audiovisual",
-      "corto": "Diseño Audiovisual ",
+      "corto": "Diseño Audiovisual",
       "institucion": "Universidad Católica de Pereira",
       "anio": "En curso · 8.º semestre",
-      "imagen": null,
+      "imagen": "assets/titulos/ucp-diseno-audiovisual.webp",
       "linea": "",
-      "pared": "derecha",
-      "reservado": true
+      "pared": "fondo"
     }
   ]
 }

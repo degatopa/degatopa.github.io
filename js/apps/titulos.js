@@ -9,14 +9,15 @@ const ALTO = 640;
 const FUGA = { x: 600, y: 255 };
 const PARED = { x0: 190, x1: 1010, arriba: 50, abajo: 470 };
 
-// Posición de cada cuadro: los tres de la pared del fondo y el de la pared derecha.
+// Posición de cada cuadro: los tres de la pared del fondo y uno en cada pared lateral.
 const CAJAS = {
   fondo: [
-    { x: 245, y: 200, w: 180, h: 135 },
+    { x: 205, y: 180, w: 220, h: 165 },
     { x: 450, y: 150, w: 300, h: 210 },
-    { x: 775, y: 200, w: 180, h: 135 },
+    { x: 775, y: 180, w: 220, h: 165 },
   ],
-  derecha: { x: 1052, y: 180, w: 112, h: 210 },
+  izquierda: { x: -40, y: 196, w: 200, h: 150 },
+  derecha: { x: 1040, y: 196, w: 200, h: 150 },
 };
 
 /** Piso a cuadros crema y negro que converge hacia el punto de fuga. */
@@ -45,8 +46,9 @@ function piso() {
   return baldosas;
 }
 
-function salaSVG() {
-  const conos = CAJAS.fondo
+/** La sala, con una lámpara sobre cada cuadro de la pared del fondo. */
+function salaSVG(enFondo) {
+  const conos = enFondo
     .map((c) => {
       const lx = c.x + c.w / 2;
       return `<polygon points="${lx - 14},${PARED.arriba} ${lx + 14},${PARED.arriba} ${c.x + c.w + 40},${PARED.abajo} ${c.x - 40},${PARED.abajo}" fill="url(#cono)"/>
@@ -100,8 +102,10 @@ export function crear(cuerpo, { datos, ventana, cargarFuentes }) {
   cargarFuentes('family=Libertinus+Serif:ital,wght@0,400;0,600;1,400');
   const id = `sala-${++n}`;
   const { cuadros, sala, descripcion } = datos.titulos;
-  let enFondo = 0;
-  const cajas = cuadros.map((c) => (c.pared === 'derecha' ? CAJAS.derecha : CAJAS.fondo[enFondo++]));
+  // El cuadro destacado va en el marco grande del centro; los demás de la pared del fondo, en los lados.
+  const lateral = (c) => c.pared === 'izquierda' || c.pared === 'derecha';
+  const libres = cuadros.some((c) => c.destacado && !lateral(c)) ? [0, 2] : [0, 1, 2];
+  const cajas = cuadros.map((c) => (lateral(c) ? CAJAS[c.pared] : CAJAS.fondo[c.destacado ? 1 : libres.shift()]));
   let actual = -1;
   const tituloBase = ventana.titulo;
 
@@ -110,10 +114,10 @@ export function crear(cuerpo, { datos, ventana, cargarFuentes }) {
       <div class="sala" tabindex="-1">
         <div class="sala__mundo">
           <div class="sala__camara">
-            ${salaSVG()}
+            ${salaSVG(cajas.filter((k) => CAJAS.fondo.includes(k)))}
             ${cuadros.map((c, i) => {
               const k = cajas[i];
-              const lado = c.pared === 'derecha' ? ' cuadro--derecha' : '';
+              const lado = c.pared === 'derecha' || c.pared === 'izquierda' ? ` cuadro--${c.pared}` : '';
               return `
                 <button type="button" class="cuadro${lado}${c.destacado ? ' cuadro--destacado' : ''}${c.reservado ? ' cuadro--vacio' : ''}" data-i="${i}"
                   style="left:${k.x}px;top:${k.y}px;width:${k.w}px;height:${k.h}px"
@@ -121,7 +125,7 @@ export function crear(cuerpo, { datos, ventana, cargarFuentes }) {
                   <span class="cuadro__cuerda" aria-hidden="true"></span>
                   <span class="cuadro__marco"><span class="cuadro__paspartu">${contenidoCuadro(c)}</span></span>
                 </button>
-                ${c.pared === 'derecha' ? '' : `<p class="placa" style="left:${k.x + k.w / 2}px;top:${k.y + k.h + 14}px" aria-hidden="true">${t(c.corto)} · ${t(c.institucion)} · ${t(c.anio)}</p>`}`;
+                ${lado ? '' : `<p class="placa" style="left:${k.x + k.w / 2}px;top:${k.y + k.h + 14}px" aria-hidden="true">${t(c.corto)} · ${t(c.institucion)} · ${t(c.anio)}</p>`}`;
             }).join('')}
           </div>
         </div>
@@ -133,7 +137,7 @@ export function crear(cuerpo, { datos, ventana, cargarFuentes }) {
         <p class="sala__nombre" aria-hidden="true">${t(sala)}</p>
         <div class="minimapa" aria-hidden="true">
           <p>MAPA · ${t(sala.split('·')[0].trim())}</p>
-          <div class="minimapa__muro">${cuadros.map((c, i) => `<span class="minimapa__c${c.pared === 'derecha' ? ' minimapa__c--lado' : ''}${c.destacado ? ' minimapa__c--grande' : ''}" data-m="${i}"></span>`).join('')}</div>
+          <div class="minimapa__muro">${cuadros.map((c, i) => `<span class="minimapa__c${c.pared === 'derecha' || c.pared === 'izquierda' ? ` minimapa__c--lado minimapa__c--${c.pared}` : ''}${c.destacado ? ' minimapa__c--grande' : ''}" data-m="${i}"></span>`).join('')}</div>
           <p class="minimapa__aqui">▲ ESTÁS AQUÍ</p>
         </div>
         <aside class="ficha-museo" aria-live="polite"></aside>
