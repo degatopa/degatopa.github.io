@@ -60,9 +60,9 @@
     {
       "id": "como-trabajo",
       "icono": "documento",
-      "etiqueta": "Cómo trabajo",
-      "menu": "Cómo trabajo",
-      "titulo": "Cómo trabajo — DEGApedia, la enciclopedia del VJ — Navegador DEGA"
+      "etiqueta": "DEGApedia",
+      "menu": "DEGApedia (sobre mí)",
+      "titulo": "Dega — DEGApedia, la enciclopedia del VJ — Navegador DEGA"
     },
     {
       "id": "software",
@@ -77,13 +77,6 @@
       "etiqueta": "Títulos",
       "menu": "Títulos",
       "titulo": "Títulos.exe — Galería 3D"
-    },
-    {
-      "id": "sobre-mi",
-      "icono": "ficha",
-      "etiqueta": "Sobre mí",
-      "menu": "Sobre mí",
-      "titulo": "Propiedades del sistema — Sobre mí"
     },
     {
       "id": "contacto",
@@ -139,10 +132,9 @@
       "reel": "Este es mi reel. Haz clic en el video para pausarlo.",
       "trabajos": "Pasa el mouse por un trabajo para ver un adelanto. Haz clic para abrirlo.",
       "proyecto": "¿Te imaginas algo así para tu música? Te hago una demo de tu canción.",
-      "como-trabajo": "Aquí te cuento cómo trabajo, en cuatro pasos: escucho, propongo, adapto y opero.",
+      "como-trabajo": "Aquí está mi historia y cómo trabajo, en cuatro pasos: escucho, propongo, adapto y opero.",
       "software": "Haz clic en un CD para sacarlo de la caja. Con las flechas pasas de disco.",
       "titulos": "Haz clic en un cuadro y la cámara viaja hasta él. Con Esc te alejas.",
-      "sobre-mi": "Esta es mi historia. Ahí mismo puedes descargar mi dossier.",
       "contacto": "Cuéntame de tu show. Si quieres una demo, pega el enlace a tu canción.",
       "pantalla": "Si tu equipo va lento, apaga aquí el filtro CRT.",
       "hoja-de-vida": "Esta es mi hoja de vida. Con el botón amarillo la descargas en PDF.",
@@ -245,15 +237,11 @@
     ]
   },
   "sobreMi": {
-    "sistema": "DEGA OS 2000, edición VJ / diseñador audiovisual",
-    "registradoA": "Pablo Gaitán, @degadegadega",
-    "equipo": "visuales en vivo, videoclips y cine",
     "foto": "assets/fotos/dega-perfil.webp",
     "bio": [
       "Soy Pablo Gaitán alias \"DEGA\", soy un VJ y diseñador audiovisual bogotano. Descubrí los visuales en vivo gracias a una profesora que me puso a experimentar con GLMixer y me animó a competir en la Batalla de los DJs, donde gané a mejor mezcla VJ en vivo.",
       "Después pasé por videoclips, cortometrajes y videoensayos, y volví al escenario en el Festival Estéreo Picnic 2025 con Juliana Quédate Otro Día, lo cual me permitió tener una conexión sólida con ellos y empezar a crear un universo visual narrativo que terminó concluyendo en el videoclip de \"La Culpa\" el cual está nominado a \"Mejor Videoclip Nacional\" en Bogoshorts. Hoy combino After Effects, Resolume y TouchDesigner para que los visuales y los videoclips no sean un acompañamiento, sino un universo propio que el público recuerde."
     ],
-    "dossier": "assets/dossier.pdf",
     "dispositivos": [
       {
         "grupo": "Premios",
@@ -325,8 +313,8 @@
     ]
   },
   "degapedia": {
-    "direccion": "C:\\DEGA\\DEGApedia\\como-trabajo.htm",
-    "titulo": "Cómo trabajo",
+    "direccion": "C:\\DEGA\\DEGApedia\\dega.htm",
+    "titulo": "Dega",
     "subtitulo": "De DEGApedia, la enciclopedia del buen realizado audiovisual",
     "ficha": [
       {
@@ -463,9 +451,9 @@
         "ruta": "trabajos/fep-2025"
       },
       {
-        "titulo": "Sobre mí",
-        "fuente": "Propiedades del sistema, DEGA OS",
-        "ruta": "sobre-mi"
+        "titulo": "Hoja de vida",
+        "fuente": "DEGA OS",
+        "ruta": "hoja-de-vida"
       }
     ],
     "categorias": [
@@ -474,7 +462,16 @@
       "Visuales en vivo",
       "Mixed media"
     ],
-    "ultimaEdicion": "27 de octubre de 2026"
+    "acerca": {
+      "titulo": "Acerca de esta página",
+      "texto": [
+        "Nota aclaratoria: esta página se hizo a través de vibecoding.",
+        "Todos los presets y el pez en 3D los realicé yo, y la idea conceptual pertenece a mi anterior portafolio, que puedes descargar aquí."
+      ],
+      "boton": "DESCARGAR MI PORTAFOLIO ANTERIOR (PDF)",
+      "pdf": "assets/portafolio-anterior.pdf"
+    },
+    "ultimaEdicion": "11 de noviembre de 2026"
   },
   "mensajero": {
     "estado": "Disponible para fechas desde noviembre 2026",

@@ -35,7 +35,6 @@ const APPS = {
   'como-trabajo': { modulo: './apps/degapedia.js', ancho: 1240, alto: 780, x: 50, y: 12 },
   software: { modulo: './apps/software.js', ancho: 1180, alto: 780, x: 60, y: 14 },
   titulos: { modulo: './apps/titulos.js', ancho: 1240, alto: 780, x: 50, y: 14 },
-  'sobre-mi': { modulo: './apps/sobre-mi.js', ancho: 720, alto: 760, x: 100, y: 24, botones: ['ayuda', 'cerrar'] },
   contacto: { modulo: './apps/contacto.js', ancho: 860, alto: 780, x: 100, y: 20 },
   'hoja-de-vida': { modulo: './apps/hoja-de-vida.js', ancho: 780, alto: 760, x: 110, y: 20 },
   pantalla: { modulo: './apps/pantalla.js', ancho: 640, alto: 640, botones: ['ayuda', 'cerrar'] },
@@ -152,6 +151,8 @@ async function abrirApp(app, { ruta = null, params = {}, titulo, iconoApp, caja 
 }
 
 function alCambiarRuta() {
+  // Sobre mí ahora vive en la DEGApedia: los enlaces viejos llevan allá.
+  if (rutaActual()[0] === 'sobre-mi') reemplazarHash('como-trabajo');
   const [seccion, sub] = rutaActual();
   if (!seccion) {
     // En móvil, volver a "#/" equivale a salir de la ventana a pantalla completa.

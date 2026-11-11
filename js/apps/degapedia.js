@@ -1,5 +1,6 @@
-// Cómo trabajo: "DEGApedia, la enciclopedia del VJ", una enciclopedia de los 2000 (original)
-// dentro de una ventana de navegador. Vistas: Artículo, Discusión, Editar y Ver historial.
+// DEGApedia, "la enciclopedia del VJ": el artículo sobre Dega (biografía, trayectoria y cómo trabaja)
+// en una enciclopedia de los 2000 (original) dentro de una ventana de navegador.
+// Vistas: Artículo, Discusión, Editar y Ver historial.
 import { glifo } from '../ui/pixel.js';
 import { t, marcador } from '../ui/html.js';
 
@@ -12,6 +13,34 @@ export function crear(cuerpo, { datos, navegar, ventana, wm, cargarFuentes }) {
   const id = `wiki-${++n}`;
   const w = datos.sitio.degapedia;
   const ancla = (s) => `${id}-${s}`;
+  const yo = datos.sitio.sobreMi;
+  const { contacto, otros, marca } = datos.sitio;
+  const enlace = (x) => (typeof x === 'string' ? t(x) : `<a href="#/${t(x.ruta)}">${t(x.texto)}</a>`);
+
+  // Lo que antes estaba en Sobre mí, más la nota sobre cómo se hizo la página.
+  const biografia = {
+    id: 'biografia',
+    titulo: 'Biografía',
+    html: `<figure class="wiki__figura">${yo.foto ? `<img src="${t(yo.foto)}" alt="Pablo Gaitán, Dega" loading="lazy">` : marcador('[ TU FOTO ]', 'marcador--azul')}<figcaption>Pablo Gaitán, Dega</figcaption></figure>
+      ${yo.bio.map((p) => `<p>${t(p)}</p>`).join('')}`,
+  };
+  const trayectoria = {
+    id: 'trayectoria',
+    titulo: 'Trayectoria',
+    html: `${yo.dispositivos.map((g) => `<h4>${t(g.grupo)}</h4><ul>${g.items.map((x) => `<li>${enlace(x)}</li>`).join('')}</ul>`).join('')}
+      <h4>En internet</h4>
+      <ul>
+        <li>${t(marca.nombre)}: <a href="${t(contacto.instagramUrl)}" target="_blank" rel="noopener">${t(contacto.instagram)}</a></li>
+        ${otros.map((o) => `<li>${t(o.nombre)} (${t(o.tipo)})</li>`).join('')}
+      </ul>`,
+  };
+  const acerca = {
+    id: 'acerca',
+    titulo: w.acerca.titulo,
+    html: `<div class="wiki__nota">${w.acerca.texto.map((p) => `<p>${t(p)}</p>`).join('')}
+      <p><a class="wiki__demo wiki__descarga" href="${t(w.acerca.pdf)}" download><span aria-hidden="true">↓</span> ${t(w.acerca.boton)}</a></p></div>`,
+  };
+  const secciones = [biografia, trayectoria, ...w.secciones, acerca];
 
   // Introducción: "Dega" y "Pablo Gaitán" en negrita, los cuatro pasos enlazan a su sección y cada párrafo lleva su referencia.
   const intro = w.introduccion
@@ -35,9 +64,9 @@ export function crear(cuerpo, { datos, navegar, ventana, wm, cargarFuentes }) {
     .join('');
 
   const indice = [
-    ...w.secciones.map((s, i) => `<li><a href="#/como-trabajo" data-ancla="${s.id}"><span>${i + 1}</span> ${t(s.titulo)}</a>
+    ...secciones.map((s, i) => `<li><a href="#/como-trabajo" data-ancla="${s.id}"><span>${i + 1}</span> ${t(s.titulo)}</a>
       ${s.fichaTecnica ? `<ol><li><a href="#/como-trabajo" data-ancla="ficha-tecnica"><span>${i + 1}.1</span> Ficha técnica</a></li></ol>` : ''}</li>`),
-    `<li><a href="#/como-trabajo" data-ancla="referencias"><span>${w.secciones.length + 1}</span> Referencias</a></li>`,
+    `<li><a href="#/como-trabajo" data-ancla="referencias"><span>${secciones.length + 1}</span> Referencias</a></li>`,
   ].join('');
 
   const seccion = (s, i) => `
@@ -46,7 +75,7 @@ export function crear(cuerpo, { datos, navegar, ventana, wm, cargarFuentes }) {
       ${s.veaseTambien ? `<p class="wiki__vease">Véase también: <a href="#/${s.veaseTambien.ruta}">${t(s.veaseTambien.texto)}</a></p>` : ''}
       ${s.paleta ? `<figure class="wiki__figura"><div class="wiki__paleta">${s.paleta.map((c) => `<span style="background:${c}"></span>`).join('')}</div><figcaption>${t(s.piePaleta)}</figcaption></figure>` : ''}
       ${s.id === 'opero' ? `<figure class="wiki__figura">${s.foto ? `<img src="${t(s.foto)}" alt="${t(s.pie)}" loading="lazy">` : marcador('[ FOTO DEL SHOW ]', 'marcador--azul')}<figcaption>${t(s.pie)}</figcaption></figure>` : ''}
-      <p>${t(s.texto)}</p>
+      ${s.html ?? `<p>${t(s.texto)}</p>`}
       ${s.fichaTecnica ? `
         <h4 id="${ancla('ficha-tecnica')}">${i + 1}.1 Ficha técnica</h4>
         <table class="wiki__tabla">
@@ -133,7 +162,7 @@ export function crear(cuerpo, { datos, navegar, ventana, wm, cargarFuentes }) {
                 <ol>${indice}</ol>
               </nav>
 
-              ${w.secciones.map(seccion).join('')}
+              ${secciones.map(seccion).join('')}
 
               <section class="wiki__seccion" id="${ancla('referencias')}" aria-labelledby="${ancla('referencias')}-h">
                 <h3 id="${ancla('referencias')}-h">Referencias</h3>
@@ -168,7 +197,7 @@ export function crear(cuerpo, { datos, navegar, ventana, wm, cargarFuentes }) {
         </div>
         <footer class="wiki__pie">
           <span>Esta página se editó por última vez el ${t(w.ultimaEdicion)}.</span>
-          <a href="#/sobre-mi">Acerca de DEGApedia</a>
+          <a href="#/como-trabajo" data-ancla="acerca">Acerca de esta página</a>
           <a href="#/contacto">Contacto</a>
           <button type="button" class="wiki__enlace" data-accion="escritorio">Volver al escritorio</button>
         </footer>
