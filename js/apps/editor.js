@@ -16,7 +16,7 @@ const ETIQUETAS = {
   frase: 'Lo que dijo la banda', fotos: 'Fotos', src: 'Archivo (por ejemplo assets/fotos/foto.webp)', alt: 'Descripción de la foto',
   nombre: 'Nombre', etiqueta: 'Etiqueta', tag: 'Etiqueta corta', uso: 'Para qué lo uso', desde: 'Desde (año)',
   color: 'Color de la carátula', tinta: 'Color del texto', encabezado: 'Encabezado del cuadro', corto: 'Texto de la placa',
-  institucion: 'Institución', anio: 'Año', imagen: 'Imagen (ruta, por ejemplo assets/titulos/diploma.webp)',
+  institucion: 'Institución', placa: 'Nombre corto para la placa', anio: 'Año', imagen: 'Imagen (ruta, por ejemplo assets/titulos/diploma.webp)',
   linea: 'Línea personal', pared: 'Pared (fondo, izquierda o derecha)', destacado: 'Cuadro destacado (más grande)', reservado: 'Marco reservado (vacío)',
   detalle: 'Detalle', foto: 'Foto (ruta, por ejemplo assets/fotos/dega.webp)', pieFoto: 'Pie de la foto',
   aviso: 'Aviso de prototipo (bórralo cuando los textos estén listos)', ultimaEdicion: 'Última edición',

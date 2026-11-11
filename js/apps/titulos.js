@@ -125,7 +125,7 @@ export function crear(cuerpo, { datos, ventana, cargarFuentes }) {
                   <span class="cuadro__cuerda" aria-hidden="true"></span>
                   <span class="cuadro__marco"><span class="cuadro__paspartu">${contenidoCuadro(c)}</span></span>
                 </button>
-                ${lado ? '' : `<p class="placa" style="left:${k.x + k.w / 2}px;top:${k.y + k.h + 14}px" aria-hidden="true">${t(c.corto)} · ${t(c.institucion)} · ${t(c.anio)}</p>`}`;
+                ${lado ? '' : `<p class="placa" style="left:${k.x + k.w / 2}px;top:${k.y + k.h + 14}px" aria-hidden="true">${t(c.corto)} · ${t(c.placa || c.institucion)} · ${t(c.anio)}</p>`}`;
             }).join('')}
           </div>
         </div>

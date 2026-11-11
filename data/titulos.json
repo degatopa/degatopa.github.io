@@ -3,18 +3,6 @@
   "descripcion": "Sala 01: diplomas y reconocimientos",
   "cuadros": [
     {
-      "id": "bogoshorts-2026",
-      "encabezado": "NOMINADO",
-      "titulo": "Mejor Videoclip Nacional",
-      "corto": "Nominado · Mejor Videoclip Nacional",
-      "institucion": "Festival Internacional Bogoshorts",
-      "anio": "2026",
-      "detalle": "Nominado con «La Culpa» de Juliana Quédate Otro Día",
-      "imagen": "assets/titulos/bogoshorts-la-culpa.webp",
-      "linea": "",
-      "pared": "fondo"
-    },
-    {
       "id": "batalla-djs-2024",
       "encabezado": "GANADOR",
       "titulo": "Mejor mezcla VJ en vivo",
@@ -24,8 +12,21 @@
       "detalle": "Ganador",
       "imagen": "assets/titulos/batalla-djs-2024.webp",
       "linea": "",
+      "pared": "fondo"
+    },
+    {
+      "id": "bogoshorts-2026",
+      "encabezado": "NOMINADO",
+      "titulo": "Mejor Videoclip Nacional",
+      "corto": "Nominado · Mejor Videoclip Nacional",
+      "institucion": "Festival Internacional Bogoshorts",
+      "anio": "2026",
+      "detalle": "Nominado con «La Culpa» de Juliana Quédate Otro Día",
+      "imagen": "assets/titulos/bogoshorts-la-culpa.webp",
+      "linea": "",
       "pared": "fondo",
-      "destacado": true
+      "destacado": true,
+      "placa": "Bogoshorts"
     },
     {
       "id": "ucp-diseno-audiovisual",
